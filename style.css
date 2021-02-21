@@ -89,17 +89,17 @@ button:hover {
 }
 
 #start-btn,
-button#reset {
+button.reset {
     margin-top: 1em;
     margin-bottom: 0.5em;
     padding: 0.5em 1em;
 }
 
-button#reset {
+button.reset {
     background: #e43247;
 }
 
-.display .gameover button#reset {
+.display .gameover button.reset {
     font-size: 1.3rem;
     margin-top: 1em;
     padding: 0.5em 1em;

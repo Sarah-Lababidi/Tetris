@@ -6,7 +6,7 @@ const pScore = document.querySelector('p#score');
 const screenDisplay = document.querySelector('section.display');
 const pauseScreen = document.querySelector('section.display div.pauseScreen');
 const gameoverScreen = document.querySelector('section.display div.gameover');
-const resetBtn = document.querySelector('button#reset');
+const resetBtns = document.querySelectorAll('button.reset');
 const pauseBtn = document.querySelector('button#pause');
 
 let score = 0;
@@ -302,6 +302,7 @@ function gameover() {
 
 // ------------------------------------- Reset Game -----------------------------------------------------------------
 function resetGame() {
+    console.log("In reset game")
     screenDisplay.classList.add('hidden');
     container.classList.remove('blur');
     startButton.disabled = false;
@@ -331,7 +332,10 @@ function resetGame() {
 
     displayNext();
 }
-resetBtn.addEventListener('click', resetGame);
+
+resetBtns.forEach(btn => {
+    btn.addEventListener('click', resetGame);
+})
 
 // ------------------------------------- Resume Function -----------------------------------------------------------------
 pauseBtn.addEventListener('click', resume);
