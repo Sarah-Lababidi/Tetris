@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+body {
+    box-sizing: border-box;
+    background: #bed6e4;
+    font-family: 'Roboto', sans-serif;
+}
+
+header h1 {
+    color: #0f4c5c;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 0.6em;
+    margin-top: 0.4em;
+    margin-bottom: 0.5em;
+    margin-left: -10%;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    max-width: 850px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    transition: opacity 0.5s ease;
+}
+
+#grid {
+    width: 600px;
+    height: 600px;
+    background: #f0efeb;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#displayNext {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #f0efeb;
+}
+
+#grid div,
+#displayNext div {
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    transition: display 0.3s ease;
+}
+
+.tetromino {
+    background: olive;
+}
+
+.hidden {
+    display: none;
+}
+
+.blur {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.mini-grid {
+    background: #b8c3c9;
+    text-align: center;
+    letter-spacing: 0.3em;
+    padding: 0.5em 2em;
+    border-radius: 0.3em;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0.3em;
+    background: #0d404d;
+    color: #eee;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    background: #082c35;
+    border: none;
+}
+
+#start-btn,
+button#reset {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    padding: 0.5em 1em;
+}
+
+button#reset {
+    background: #e43247;
+}
+
+.display .gameover button#reset {
+    font-size: 1.3rem;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+}
+
+.display {
+    /* padding: 1em; */
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: #babfc2;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0.3em;
+}
+
+.display .gameover {
+    margin-top: 30%;
+}
+
+.display .gameover h1 {
+    font-size: 2rem;
+    letter-spacing: 0.3em;
+    color: #0f4c5c;
+}
+
+button#pause {
+    height: 300px;
+    width: 300px;
+    font-size: 2rem;
+    letter-spacing: 0.3em;
+    color: #eee;
+    background: #959b9e;
+    text-transform: uppercase;
+    transition: display color 0.3s ease;
+}
